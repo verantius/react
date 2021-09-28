@@ -1,11 +1,15 @@
-function Modal(){
+function Modal(props) {
     return (
-        <div className='Modal'>
-            <p>are u sure ?</p>
-            <button className='btn btn--alt'>cancel</button>
-            <button className='btn'>confirm</button>
-        </div>
+      <div className='modal'>
+        <p>{props.text}</p>
+        <button className='btn btn--alt' onClick={props.onClose}>
+          Cancel
+        </button>
+        <button className='btn' onClick={props.onClose}>
+          Confirm
+        </button>
+      </div>
     );
-}
-
-export default Modal;
+  }
+  
+  export default Modal;
